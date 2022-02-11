@@ -21,7 +21,7 @@ export default {
 .hex-container
     display: inline-block
     width: fit-content
-    padding: 0.7rem 6rem 0.7rem 0.5rem
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem
     clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 0 50%)
     overflow: hidden
 </style>

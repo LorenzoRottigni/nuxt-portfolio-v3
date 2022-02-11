@@ -60,6 +60,6 @@ export default {
     babelrc: false,
     cacheDirectory: undefined,
     presets: ['@nuxt/babel-preset-app'],
-    //transpile: ['primevue'],
+    transpile: ['primevue'],
   }
 }

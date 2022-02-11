@@ -1,13 +1,12 @@
 <template lang="pug">
-.container-fluid.overflow-auto
+#scroller.container-fluid.overflow-auto
 
   ///////////////
   // FIRST ROW //
   ///////////////
-  .row
+  section.row
     .col-10.offset-1.col-xl-8.offset-xl-2
       .h-100.border.d-flex.align-items-center
-
         .w-50
           ////////////////
           // HERO IMAGE //
@@ -55,7 +54,7 @@
                   a.px-3.text-decoration-none.d-none.d-md-block(href="#Terminal")
                     button.btn.btn-primary Terminal
                   span.d-none.d-lg-block
-                    a.text-decoration-none(href="#More")
+                    a.text-decoration-none(href="#About")
                       button.btn.btn-outline-primary About
 
 
@@ -64,20 +63,56 @@
   ////////////////
   // SECOND ROW //
   ////////////////
-  .row
+  section#Terminal.row
     .col-10.offset-1.col-xl-8.offset-xl-2.border
-        h1 2nd row
+      .d-flex.justify-content-center.align-items-center.h-100.rounded
+        .w-50.h-75.p-3.bg-dark.d-flex.align-items-center.border.border-primary.shadow-lg
+          ul.w-100.h-100.bg-primary.text-dark.h-75.mb-0.d-flex.flex-column.justify-content-center
+            li
+              button.btn Help
+            li
+              button.btn Routing
+            li
+              button.btn date
+            li
+              button.btn repo
+            li
+              button.btn video
+        .w-50.h-75.p-3.bg-dark.d-flex.align-items-center.border.border-primary.shadow-lg
+          Terminal.bg-light.w-100.h-100.p-3(
+            welcomeMessage="Welcome to my CLI",
+            prompt="~guest $",
+
+          )
 
   ///////////////
   // THIRD ROW //
   ///////////////
-  .row
+  section#About.row
     .col-10.offset-1.col-xl-8.offset-xl-2.border
         h1 3rd row
 </template>
 
 <script>
-export default {}
+import Terminal from 'primevue/terminal'
+import TerminalService from 'primevue/terminalservice'
+
+export default {
+  components: { Terminal },
+  methods:{
+    scrollTop(){
+      if(process.browser){
+        const scrollableContainer = document.getElementById('scroller')
+        scrollableContainer.scrollTop = 0
+        //scrollableContainer.scrollTop = document.documentElement.clientHeight * 0.2
+        //document.documentElement.clientHeight * 0.03
+      }
+    }
+  },
+  mounted(){
+    this.scrollTop()
+  }
+}
 </script>
 
 <style lang="sass" scoped>
@@ -90,8 +125,8 @@ export default {}
   max-height: 100vh
   scroll-behavior: smooth
   .row
-    height: 75vh
-    margin: 12.5vh 0
+    height: 100vh
+    padding: 12.5vh 0
     transition: 1.5s
 
 /////////////////
