@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21.17mm" opacity="0.1" height="21.17mm" viewBox="0 0 21.17 21.17" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="b" x="-.8" y="-.8" width="2.6" height="2.6" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.667"/>
+  </filter>
+  <meshgradient id="a" x="61.856" y="379.399" gradientTransform="rotate(-45 -414.2 244.26)" gradientUnits="userSpaceOnUse">
+   <meshrow>
+    <meshpatch>
+     <stop stop-color="#ff6f28" path="c 0,5.77195 -4.67909,10.451 -10.451,10.451"/>
+     <stop path="l 0,-10.451"/>
+     <stop path="l 0,0"/>
+     <stop path="l 10.451,0"/>
+    </meshpatch>
+    <meshpatch>
+     <stop path="c -5.77195,0 -10.451,-4.67909 -10.451,-10.451"/>
+     <stop path="l 10.451,0"/>
+     <stop path="l 0,0"/>
+    </meshpatch>
+    <meshpatch>
+     <stop path="c 0,-5.77195 4.67909,-10.451 10.451,-10.451"/>
+     <stop stop-color="#ff6f28" path="l -4.21753e-005,10.451"/>
+     <stop stop-color="#ff6f28" path="l 4.21753e-005,0"/>
+    </meshpatch>
+    <meshpatch>opacity="0.3"
+     <stop path="c 5.77195,0 10.4511,4.67916 10.451,10.451"/>
+     <stop stop-color="#ff6f28" path="l -10.451,-7.35946e-006"/>
+     <stop stop-color="#ff6f28" path="l -1.29023e-005,3.08016e-006"/>
+    </meshpatch>
+   </meshrow>
+  </meshgradient>
+ </defs>
+ <g stroke="#F9E79F" stroke-linecap="round" stroke-linejoin="round" stroke-width=".265" paint-order="normal">
+  <path d="M10.736.133a10.451 10.451 0 0 0-7.543 3.06 10.451 10.451 0 0 0 0 14.78 10.451 10.451 0 0 0 14.78 0 10.451 10.451 0 0 0 0-14.78 10.451 10.451 0 0 0-7.237-3.06z" fill="url(#a)"/>
+  <path d="m10.583 4.366a6.218 6.218 0 0 0-6.218 6.217 6.218 6.218 0 0 0 6.218 6.218 6.218 6.218 0 0 0 6.218-6.218 6.218 6.218 0 0 0-6.218-6.217z" fill="none"/>
+  <path d="M10.583 8.599a1.984 1.984 0 0 0-1.984 1.984 1.984 1.984 0 0 0 1.984 1.985 1.984 1.984 0 0 0 1.984-1.985A1.984 1.984 0 0 0 10.583 8.6z" fill="none"/>
+ </g>
+ 
+</svg>
