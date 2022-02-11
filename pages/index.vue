@@ -1,10 +1,10 @@
 <template lang="pug">
-#scroller.container-fluid.overflow-auto
+.container-fluid.overflow-auto
 
   ///////////////
   // FIRST ROW //
   ///////////////
-  section.row
+  section#hero-section.row
     .col-10.offset-1.col-xl-8.offset-xl-2
       .h-100.border.d-flex.align-items-center
         .w-50
@@ -102,8 +102,8 @@ export default {
   methods:{
     scrollTop(){
       if(process.browser){
-        const scrollableContainer = document.getElementById('scroller')
-        scrollableContainer.scrollTop = 0
+        const firstRow = document.getElementById('hero-section')
+        firstRow.scrollIntoView()
         //scrollableContainer.scrollTop = document.documentElement.clientHeight * 0.2
         //document.documentElement.clientHeight * 0.03
       }
