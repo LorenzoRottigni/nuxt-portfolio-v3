@@ -5,48 +5,76 @@
   // FIRST ROW //
   ///////////////
   section#hero-section.row
-    .col-10.offset-1.col-xl-8.offset-xl-2
-      .h-100.border.d-flex.align-items-center
-        .w-50
-          ////////////////
-          // HERO IMAGE //
-          ////////////////
-          #hero-polygon-image.mx-auto
+    .col-10.offset-1.col-xl-8.offset-xl-2.px-0
+      .container.h-100.d-flex.align-items-center.flex-wrap
+        .col-8.offset-2.col-lg-6.offset-lg-0.px-0
+          //HERO IMAGE
+          #hero-polygon-image
             .hero-image-overlay
-            //(
-             :class="(hasBlur) ? 'img-blur' : ''"
-              )
 
-        .w-50
-          //////////////////////////
-          // HERO CONTENT DESKTOP //
-          //////////////////////////
-          #hero-content.border-primary.border-bottom.p-0.align-items-start.justify-content-center.d-none.d-lg-flex
+        //////////////////////////////
+        // DESKTOP HERO CONTENT ROW //
+        //////////////////////////////
+        .col-12.col-lg-6.px-0.d-block.d-lg-none
+          #hero-content-mobile.d-flex.flex-column.align-items-center.justify-content-center.py-3
+            h2.text-primary.text-nowrap.mb-0 LORENZO ROTTIGNI
+            .d-flex.align-items-center.justify-content-center
+              .d-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                lord-icon(
+                  src="https://cdn.lordicon.com/anihkfxp.json"
+                  trigger="loop"
+                  colors="primary:#ff6f28,secondary:#ffffff"
+                  style="width:65px;height:65px"
+                )
+                h6.text-white.text-center LR Term
+              .d-none.d-md-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                lord-icon(
+                  src="https://cdn.lordicon.com/dtgezzsi.json"
+                  trigger="loop"
+                  colors="primary:#ff6f28,secondary:#ffffff"
+                  style="width:65px;height:65px"
+                )
+                h6.text-white.text-center Coding
+              .border-left.border-right.border-primary.p-3.my-3.bg-dark-deep
+                LogoLR
+              .d-none.d-md-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                lord-icon(
+                  src="https://cdn.lordicon.com/nocovwne.json"
+                  trigger="loop"
+                  colors="primary:#ff6f28,secondary:#ffffff"
+                  style="width:65px;height:65px"
+                )
+                h6.text-white.text-center CV
+
+              .d-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                lord-icon(
+                  src="https://cdn.lordicon.com/ochimkct.json"
+                  trigger="loop"
+                  colors="primary:#ff6f28,secondary:#ffffff"
+                  style="width:65px;height:65px"
+                )
+                h6.text-white.text-center Repos
+            h4.text-white.text-nowrap.mb-0 Full-Stack Web Developer
+        //////////////////////////////
+        // DESKTOP HERO CONTENT ROW //
+        //////////////////////////////
+        .col-12.col-lg-6.px-0.d-none.d-lg-block
+          #hero-content-desktop.border-primary.border-bottom.p-0.d-flex.align-items-start.justify-content-center
             //ROLLING LOGO
             .logo-svg.p-2
               LogoLR
-
             .w-100.h-100.d-flex.flex-column.justify-content-start.justify-content-lg-around
-
               h1.text-center.border-bottom.border-primary.py-3.mb-0 LORENZO ROTTIGNI
-
               .bg-dark-deep.flex-grow-1.d-flex.flex-column.align-items-start.justify-content-around.p-3.border-left.border-right.border-primary
-
                 //HEX BANNER
                 HexBanner.bg-primary.text-dark.ml-n3.mt-2.shadow-lg(
                     textContent="FULL-STACK WEB DEVELOPER"
                 )
-
-
-
                 //HERO PARAGRAPHS
                 .text-container.text-white.py-3.d-none.d-lg-block
                   p.mb-1 Welcome to my web portfolio!
                   p.mb-1 You can play at my portfolio using the top, left, right, and bottom pivotal buttons.
                   p.mb-1 The radar on the left of your screen will track your position around the map, you can look at routes nearby and reach them by clicking its icon
-
-                //GITHUB LINK
-                nuxt-link(to="/github").text-warning.w-100.d-flex.justify-content-end.justify-content-lg-start.my-3.my-md-0 My repositories
 
               //HERO FOOTER
               .hero-footer.bg-dark-deep.border.border-primary.d-flex.justify-content-end.justify-content-lg-start
@@ -137,7 +165,7 @@ export default {
 // POLYGON HERO IMAGE
 #hero-polygon-image
   background-color: rgba(0,0,0,0.2)
-  height: 50vh
+  height: 35vh
   width: auto
   position: relative
   margin: 0 auto
@@ -155,7 +183,7 @@ export default {
     background-position: center
 
 // HERO TEXT CONTENT
-#hero-content
+#hero-content-desktop
   //height: 55vh
   height: 55vh
   width: 100%

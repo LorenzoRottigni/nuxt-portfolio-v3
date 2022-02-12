@@ -68,7 +68,7 @@
         left: 0
         top: 0
 .svg-container, svg
-    width: 150px
+    width: 130px
 #svg15626
     animation: rotate 7s infinite linear
 .path
@@ -79,4 +79,7 @@
   .svg-container, svg
     width: 100px
 
+@media screen and (max-width: 576px)
+  .svg-container, svg
+    width: 100px
 </style>

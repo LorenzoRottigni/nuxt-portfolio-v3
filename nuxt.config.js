@@ -21,8 +21,7 @@ export default {
     script: [
       // IT developer LI
       { src: 'https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js'},
-      // greek helmet LI
-      { src: 'https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js'}
+
     ]
   },
   target: 'server',

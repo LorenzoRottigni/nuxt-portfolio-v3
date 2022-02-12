@@ -5,7 +5,7 @@
     //-----------------------------------------//
     //  NUXT ROUTER
     //-----------------------------------------//
-    .h-100.d-flex.align-items-center.border.border-warning
+    .h-100.d-flex.align-items-center
             Nuxt
     //-----------------------------------------//
     //  FOOTER
