@@ -77,9 +77,12 @@
 
 @media screen and (max-height: 650px)
   .svg-container, svg
-    width: 100px
+    width: 70px
 
 @media screen and (max-width: 576px)
+  .svg-container, svg
+    width: 70px
+@media screen and (min-width: 577px) and (max-width: 992px)
   .svg-container, svg
     width: 100px
 </style>

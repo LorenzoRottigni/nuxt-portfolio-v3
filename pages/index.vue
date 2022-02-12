@@ -7,54 +7,67 @@
   section#hero-section.row
     .col-10.offset-1.col-xl-8.offset-xl-2.px-0
       .container.h-100.d-flex.align-items-center.flex-wrap
-        .col-8.offset-2.col-lg-6.offset-lg-0.px-0
+        .col-12.col-sm-8.offset-sm-2.col-lg-6.offset-lg-0.px-0
           //HERO IMAGE
           #hero-polygon-image
             .hero-image-overlay
 
+
+
+
         //////////////////////////////
-        // DESKTOP HERO CONTENT ROW //
+        // MOBILE HERO CONTENT ROW //
         //////////////////////////////
         .col-12.col-lg-6.px-0.d-block.d-lg-none
           #hero-content-mobile.d-flex.flex-column.align-items-center.justify-content-center.py-3
-            h2.text-primary.text-nowrap.mb-0 LORENZO ROTTIGNI
+            h2.text-primary.text-nowrap LORENZO ROTTIGNI
+            h5.text-white.text-nowrap.mb-0 Full-Stack Web Developer
             .d-flex.align-items-center.justify-content-center
-              .d-flex.flex-column.border-top.border-bottom.border-primary.px-2
-                lord-icon(
-                  src="https://cdn.lordicon.com/anihkfxp.json"
-                  trigger="loop"
-                  colors="primary:#ff6f28,secondary:#ffffff"
-                  style="width:65px;height:65px"
-                )
-                h6.text-white.text-center LR Term
-              .d-none.d-md-flex.flex-column.border-top.border-bottom.border-primary.px-2
-                lord-icon(
-                  src="https://cdn.lordicon.com/dtgezzsi.json"
-                  trigger="loop"
-                  colors="primary:#ff6f28,secondary:#ffffff"
-                  style="width:65px;height:65px"
-                )
-                h6.text-white.text-center Coding
+              .hero-lord-icon.border-top.border-bottom.border-primary.px-2
+                a.d-flex.flex-column(href="#Terminal")
+                  lord-icon(
+                    src="https://cdn.lordicon.com/anihkfxp.json"
+                    trigger="loop"
+                    colors="primary:#ff6f28,secondary:#ffffff"
+                    style="width:65px;height:65px"
+                  )
+                  h6.text-white.text-center LR Term
+              .hero-lord-icon.d-none.d-sm-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                a.d-flex.flex-column(href="#About")
+                  lord-icon(
+                      src="https://cdn.lordicon.com/ngcezuqf.json"
+                      trigger="loop"
+                      colors="primary:#ff6f28,secondary:#ffffff"
+                      style="width:65px;height:65px"
+                    )
+                  h6.text-white.text-center About
               .border-left.border-right.border-primary.p-3.my-3.bg-dark-deep
                 LogoLR
-              .d-none.d-md-flex.flex-column.border-top.border-bottom.border-primary.px-2
-                lord-icon(
-                  src="https://cdn.lordicon.com/nocovwne.json"
-                  trigger="loop"
-                  colors="primary:#ff6f28,secondary:#ffffff"
-                  style="width:65px;height:65px"
-                )
-                h6.text-white.text-center CV
+              .hero-lord-icon.d-none.d-sm-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                nuxt-link.d-flex.flex-column(to="/cv")
+                  lord-icon(
+                    src="https://cdn.lordicon.com/nocovwne.json"
+                    trigger="loop"
+                    colors="primary:#ff6f28,secondary:#ffffff"
+                    style="width:65px;height:65px"
+                  )
+                  h6.text-white.text-center CV
 
-              .d-flex.flex-column.border-top.border-bottom.border-primary.px-2
-                lord-icon(
-                  src="https://cdn.lordicon.com/ochimkct.json"
-                  trigger="loop"
-                  colors="primary:#ff6f28,secondary:#ffffff"
-                  style="width:65px;height:65px"
-                )
-                h6.text-white.text-center Repos
-            h4.text-white.text-nowrap.mb-0 Full-Stack Web Developer
+              .hero-lord-icon.d-flex.flex-column.border-top.border-bottom.border-primary.px-2
+                nuxt-link.d-flex.flex-column(to="/github")
+                  lord-icon(
+                    src="https://cdn.lordicon.com/ochimkct.json"
+                    trigger="loop"
+                    colors="primary:#ff6f28,secondary:#ffffff"
+                    style="width:65px;height:65px"
+                  )
+                  h6.text-white.text-center Repos
+            
+
+
+
+
+
         //////////////////////////////
         // DESKTOP HERO CONTENT ROW //
         //////////////////////////////
@@ -79,46 +92,96 @@
               //HERO FOOTER
               .hero-footer.bg-dark-deep.border.border-primary.d-flex.justify-content-end.justify-content-lg-start
                 .w-75.d-flex.py-3.justify-content-end.justify-content-lg-around
-                  a.px-3.text-decoration-none.d-none.d-md-block(href="#Terminal")
-                    button.btn.btn-primary Terminal
-                  span.d-none.d-lg-block
-                    a.text-decoration-none(href="#About")
-                      button.btn.btn-outline-primary About
+                  a.px-2.text-decoration-none.d-flex.align-items-center(href="#Terminal")
+                    lord-icon(
+                      src="https://cdn.lordicon.com/anihkfxp.json"
+                      trigger="loop"
+                      colors="primary:#ff6f28,secondary:#ffffff"
+                      style="width:65px;height:65px"
+                    )
+                    h6.text-white.text-center.text-nowrap.mb-0 LR Term
+
+                  a.px-2.text-decoration-none.d-flex.align-items-center(href="#About")
+                    lord-icon(
+                      src="https://cdn.lordicon.com/ngcezuqf.json"
+                      trigger="loop"
+                      colors="primary:#ff6f28,secondary:#ffffff"
+                      style="width:65px;height:65px"
+                    )
+                    h6.text-white.text-center.text-nowrap.mb-0 About
 
 
 
 
   ////////////////
-  // SECOND ROW //
+  // TERMINAL ROW //
   ////////////////
-  section#Terminal.row
-    .col-10.offset-1.col-xl-8.offset-xl-2.border
-      .d-flex.justify-content-center.align-items-center.h-100.rounded
-        .w-50.h-75.p-3.bg-dark.d-flex.align-items-center.border.border-primary.shadow-lg
-          ul.w-100.h-100.bg-primary.text-dark.h-75.mb-0.d-flex.flex-column.justify-content-center
-            li
-              button.btn Help
-            li
-              button.btn Routing
-            li
-              button.btn date
-            li
-              button.btn repo
-            li
-              button.btn video
-        .w-50.h-75.p-3.bg-dark.d-flex.align-items-center.border.border-primary.shadow-lg
-          Terminal.bg-light.w-100.h-100.p-3(
+  section#Terminal.row.align-items-center
+    .col-10.offset-1.col-lg-5.offset-lg-0.order-lg-2
+      Terminal.bg-light.w-100.p-3.mt-3(
             welcomeMessage="Welcome to my CLI",
             prompt="~guest $",
-
           )
+    nav.col-12.col-lg-5.order-lg-1.offset-lg-1
+      ul.list-unstyled.bg-dark-deep.text-dark.mb-0.d-flex.flex-column.mt-3
+        li.text-warning.d-flex.align-items-center.py-2.border-bottom.border-primary
+          lord-icon.mx-3(
+            src="https://cdn.lordicon.com/vlupvdhl.json"
+            trigger="loop",
+            colors="primary:#ff6f28,secondary:#ffffff",
+            style="width:30px;height:30px",
+          )
+          h6.mb-0 Help
+        li.text-warning.d-flex.align-items-center.py-2.border-bottom.border-primary
+          lord-icon.mx-3(
+            src="https://cdn.lordicon.com/vlupvdhl.json"
+            trigger="loop",
+            colors="primary:#ff6f28,secondary:#ffffff",
+            style="width:30px;height:30px",
+          )
+          h6.mb-0 Routing
+        li.text-warning.d-flex.align-items-center.py-2.border-bottom.border-primary
+          lord-icon.mx-3(
+            src="https://cdn.lordicon.com/vlupvdhl.json"
+            trigger="loop",
+            colors="primary:#ff6f28,secondary:#ffffff",
+            style="width:30px;height:30px",
+          )
+          h6.mb-0 repo
+        li.text-warning.d-flex.align-items-center.py-2.border-bottom.border-primary
+          lord-icon.mx-3(
+            src="https://cdn.lordicon.com/vlupvdhl.json"
+            trigger="loop",
+            colors="primary:#ff6f28,secondary:#ffffff",
+            style="width:30px;height:30px",
+          )
+          h6.mb-0 video
+ 
+
+
+
+
 
   ///////////////
   // THIRD ROW //
   ///////////////
-  section#About.row
-    .col-10.offset-1.col-xl-8.offset-xl-2.border
-        h1 3rd row
+  section#About.row.overflow-auto.align-items-center
+    .col-10.offset-1.mt-3
+      .d-flex.flex-column.align-items-center.h-100
+        h1.text-center.text-primary ABOUT ME 
+        .paragraph-container.text-white.mt-3
+          p I am a Web Developer and  I started my path in the IT approaching it as a game, a quest based videogame.
+          p Whenever a project works well or whenever a new skill is learnt, a new task gets completed: the tasks I complete, together, are composing my game profile or better, my developer profile.
+          p I always loved that kind of videogame, the more you play and the more you improve yourself, your profile aspect and the people you play with.
+          p This is just a beautiful free-to-play game that never ends, day by day.
+        a.d-flex.align-items-center.mt-3(href="#hero-section")
+          lord-icon(
+            src="https://cdn.lordicon.com/gmzxduhd.json"
+            trigger="loop"
+            colors="primary:#ff6f28,secondary:#ffffff"
+            style="width:65px;height:65px"
+          )
+          h6.mb-0.mx-3 Home
 </template>
 
 <script>
@@ -165,7 +228,7 @@ export default {
 // POLYGON HERO IMAGE
 #hero-polygon-image
   background-color: rgba(0,0,0,0.2)
-  height: 35vh
+  height: 45vh
   width: auto
   position: relative
   margin: 0 auto
@@ -182,10 +245,17 @@ export default {
     background-repeat: no-repeat
     background-position: center
 
+//HERO CONTENT MOBILE
+  
+.hero-lord-icon
+  background-color: rgba(0,0,0,0.2)
+
+
+
 // HERO TEXT CONTENT
 #hero-content-desktop
   //height: 55vh
-  height: 55vh
+  height: 60vh
   width: 100%
   position: relative
 
@@ -214,7 +284,7 @@ export default {
 @media screen and (min-width: 992px)
   // LG BREAKPOINT HERO IMAGE
   #hero-polygon-image
-    height: 55vh
+    height: 60vh
     clip-path: polygon(25% 0%, 100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%)
     width: 100%
     .hero-image-overlay

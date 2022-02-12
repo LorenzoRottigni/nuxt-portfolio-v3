@@ -24,7 +24,7 @@
           src="https://cdn.lordicon.com/ibgjiwvi.json",
           trigger="loop",
           colors="primary:#F9E79F,secondary:#6c757d",
-          stroke="80",
+          stroke="50",
           :style="{ width: boxSize+'vw', height: boxSize+'vw' }",
         )
 </template>

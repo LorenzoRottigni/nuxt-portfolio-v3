@@ -7,11 +7,7 @@
     //-----------------------------------------//
     .h-100.d-flex.align-items-center
             Nuxt
-    //-----------------------------------------//
-    //  FOOTER
-    //-----------------------------------------//
-
-    Footer
+    
 
     //-----------------------------------------//
     //  SCREEN CORAL OVERLAY
@@ -32,13 +28,14 @@
         @radarActiveIndex="setRadarActiveId"
     )
 
+    HeaderMobile.d-sm-none
 
     //-----------------------------------------//
     //  CONTROLLER TOP
     //-----------------------------------------//
 
     transition(name="opacity-0")
-        #top-controller.controller.shadow-lg(
+        #top-controller.d-none.d-sm-block.controller.shadow-lg(
             @click="changeRoute(radarTopRouteName)",
             v-if="radarTopRouteName",
             v-b-popover.hover.bottom="radarTopRouteName" title="Route"
@@ -83,7 +80,7 @@
     //-----------------------------------------//
 
     transition(name="opacity-0")
-        #bottom-controller.controller.shadow-lg(
+        #bottom-controller.d-none.d-sm-block.controller.shadow-lg(
             @click="changeRoute(radarBottomRouteName)",
             v-if="radarBottomRouteName",
              v-b-popover.hover.top="radarBottomRouteName" title="Route"
@@ -97,22 +94,28 @@
     //  TOP RIGHT CLOCK SECTION
     //-----------------------------------------//
 
-    #clock.p-3.d-none.d-lg-flex.align-items-center
-        //button.btn.btn-dark-deep HELP
-        HexButton.ml-4(
-            textContent="HELP"
-            color="yellow"
-            size="xs"
+    #clock.px-3.py-1.d-none.d-md-flex.align-items-center
+        lord-icon(
+          src="https://cdn.lordicon.com/iltqorsz.json"
+          trigger="loop",
+          colors="primary:#ff6f28,secondary:#ffffff"
+          stroke="50",
+          style="width:60px;height:60px",
         )
         span.mx-3.text-secondary {{getTimenow}}
 
+    //-----------------------------------------//
+    //  FOOTER
+    //-----------------------------------------//
 
+    Footer
 
 </template>
 
 <script>
 const dayjs = require('dayjs')
 import gsap from "gsap"
+import HeaderMobile from "../components/HeaderMobile.vue";
 
 export default {
     data() {
@@ -152,7 +155,7 @@ export default {
          */
         getTimenow() {
             const timenow = dayjs();
-            return timenow;
+            return timenow.format('YYYY-MM-DD | HH:mm');
         },
     },
     methods: {
@@ -205,7 +208,8 @@ export default {
             console.log("pushing " + route);
             this.$router.push({ name: route });
         }
-    }
+    },
+    components: { HeaderMobile }
 }
 </script>
 
