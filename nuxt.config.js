@@ -31,6 +31,7 @@ export default {
     '~assets/sass/__variables.sass',
     //'~assets/sass/__utility.sass',
     '@/assets/sass/nuxt-transitions',
+    "primeicons/primeicons.css"
   ],
   styleResources: {
     sass: ['~assets/sass/*.sass']

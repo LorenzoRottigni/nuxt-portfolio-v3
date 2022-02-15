@@ -232,9 +232,7 @@ export default {
         opacity: 0.2
 
 #radar
-    position: absolute
-    top: 0
-    left: 0
+
     //height: 15vw
     //width: calc(15vw + 3px)
     border-bottom: solid 3px $coral

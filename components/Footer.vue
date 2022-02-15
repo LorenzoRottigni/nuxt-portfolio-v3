@@ -21,12 +21,24 @@ footer
                         
             .col-3.offset-1.bg-dark-deep.footer-right.p-2.shadow-lg
                 .w-100.d-flex.justify-content-center
-                    lord-icon(
-                        src="https://cdn.lordicon.com/phtfmmnb.json"
-                        trigger="loop"
-                        colors="primary:#ff6f28,secondary:#ffffff"
-                        style="width:40px;height:40px"
+                    Sidebar.p-sidebar-lg.bg-primary.text-dark(
+                        :visible.sync='modalStatus',
+                        position="full",
+                        showCloseIcon=NULL
                     )
+
+                        nav
+                            ul
+                                li(v-for="(route, index) in getVueRoutes") {{route.name}}
+                            button.btn(@click='modalStatus = false')
+                    //Button.btn(@click='modalStatus = true')
+                    Button(label="menu" iconPos="right" icon="pi pi-check" @click="modalStatus = true")
+                        //lord-icon(
+                            src="https://cdn.lordicon.com/phtfmmnb.json"
+                            trigger="loop"
+                            colors="primary:#ff6f28,secondary:#ffffff"
+                            style="width:40px;height:40px"
+                            )
         .row.d-none.d-sm-flex
             .col-4.bg-dark-deep.footer-left.p-2.shadow-lg.d-flex.align-items-center.justify-content-center
                 h5.mb-0.text-center.text-white Designed with
@@ -60,9 +72,25 @@ footer
 </template>
 
 <script>
+import Sidebar from 'primevue/sidebar'
+import Button from 'primevue/button'
+
 export default {
-    
+    radarDisplay : false,
+    data(){
+        return {
+            modalStatus: false
+        }
+    },
+    computed: {
+        getVueRoutes(){
+            console.log(this.$router)
+            return this.$router.options.routes
+        }
+    },
+    components: {Sidebar, Button}
 }
+
 </script>
 
 <style lang="sass" scoped>

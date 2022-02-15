@@ -6,7 +6,9 @@
     //  NUXT ROUTER
     //-----------------------------------------//
     .h-100.d-flex.align-items-center
-            Nuxt
+       
+        
+        Nuxt
     
 
     //-----------------------------------------//
@@ -20,7 +22,7 @@
     //-----------------------------------------//
 
     // get radar active route and its near routes every redirect
-    Radar.d-none.d-md-flex(
+    Radar.radar-absolute-top-left.d-none.d-md-flex(
         @radarNext="setRadarNextRouteName",
         @radarPrevious="setRadarPreviousRouteName"
         @radarTop="setRadarTopRouteName",
@@ -107,6 +109,9 @@
     //-----------------------------------------//
     //  FOOTER
     //-----------------------------------------//
+    
+   
+
 
     Footer
 
@@ -115,7 +120,7 @@
 <script>
 const dayjs = require('dayjs')
 import gsap from "gsap"
-import HeaderMobile from "../components/HeaderMobile.vue";
+
 
 export default {
     data() {
@@ -125,7 +130,7 @@ export default {
             radarPreviousRouteName: undefined,
             radarTopRouteName: undefined,
             radarBottomRouteName: undefined,
-            radarActiveId: undefined
+            radarActiveId: undefined,
         };
     },
     computed: {
@@ -209,13 +214,17 @@ export default {
             this.$router.push({ name: route });
         }
     },
-    components: { HeaderMobile }
 }
 </script>
 
 <style lang="sass" scoped>
 #layout-default *
     overflow: hidden
+.radar-absolute-top-left
+    position: absolute
+    top: 0
+    left: 0
+
 #clock
     position: absolute
     top: -3px
